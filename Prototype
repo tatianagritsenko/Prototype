@@ -1,0 +1,72 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+class LK // личный кабинет
+{
+private:
+	string login = "customer";
+	string password = "123456";
+
+public:
+
+	void entrance() // система аутентификации
+	{
+		string l, p;
+
+		while (true)
+		{
+			cout << "Логин: ";
+			cin >> l;
+			if (l != login)
+			{
+				cout << "Неверный логин" << endl;
+				cin.clear(); cin.ignore(1000, '\n');
+			}
+				
+			else 
+				break;
+		}
+		
+		while (true)
+		{
+			cout << "Пароль: ";
+			cin >> p;
+			if (p != password)
+			{
+				cout << "Неверный пароль" << endl;
+				cin.clear(); cin.ignore(1000, '\n');
+			}
+				
+			else
+				break;
+		}
+
+		cout << "Вы вошли в Личный кабинет!" << endl;
+	}
+
+	void input_output() // ввод-вывод
+	{
+		
+	}
+
+	void data_base() // база данных
+	{
+		
+	}
+	void analitic() // аналитика
+	{
+		
+	}
+
+};
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	
+	LK cus;
+	cus.entrance();
+	
+}
